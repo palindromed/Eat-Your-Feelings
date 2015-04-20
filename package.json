@@ -1,0 +1,24 @@
+{
+  "name": "Eat-Your-Feelings",
+  "version": "0.1.0",
+  "description": "Eat your feelings",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palindromed/Eat-Your-Feelings.git"
+  },
+  "author": "us",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palindromed/Eat-Your-Feelings/issues"
+  },
+  "homepage": "https://github.com/palindromed/Eat-Your-Feelings"
+}
