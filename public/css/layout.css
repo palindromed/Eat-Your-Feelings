@@ -10,6 +10,16 @@ h1 {
   background-color: #f6e497;
   border-radius: 8em;
   text-align: center;
+  border-color: #4c1b1b;
+  -moz-box-shadow: 6px 6px 10px 1px #422e13;
+  -webkit-box-shadow: 6px 6px 10px 1px #422e13;
+  box-shadow: 6px 6px 10px 1px #422e13;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6e497), color-stop(1, #8a642f));
+  background:-moz-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-webkit-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-o-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-ms-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:linear-gradient(to bottom, #f6e497 5%, #8a642f 120%);
 }
 article p {
   font-style: italic;
@@ -57,13 +67,22 @@ article p {
   top:1px;
 }
 
-
-
 #leftsection {
   font-color: #4c1b1b;
   height: 19em;
   background-color: #bd8d46;
   border-radius: 2em;
+  border: .1em solid;
+  border-color: #4c1b1b;
+  -moz-box-shadow: 6px 6px 10px 1px #422e13;
+  -webkit-box-shadow: 6px 6px 10px 1px #422e13;
+  box-shadow: 6px 6px 10px 1px #422e13;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6e497), color-stop(1, #8a642f));
+  background:-moz-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-webkit-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-o-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-ms-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:linear-gradient(to bottom, #f6e497 5%, #8a642f 120%);
 }
 ol {
   padding-left: 1.75em;
@@ -90,13 +109,26 @@ footer {
   width: 100%;
   padding: 10px;
   background-color: #f6e497;
-  border-radius: 8em;
+
   text-align: center;
 }
 #footer {
+    border-radius: 8em;
+  color: #4c1b1b;
+  border-color: #4c1b1b;
+  -moz-box-shadow: 6px 6px 10px 1px #422e13;
+  -webkit-box-shadow: 6px 6px 10px 1px #422e13;
+  box-shadow: 6px 6px 10px 1px #422e13;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6e497), color-stop(1, #8a642f));
+  background:-moz-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-webkit-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-o-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-ms-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:linear-gradient(to bottom, #f6e497 5%, #8a642f 120%);
+}
+#footer p {
   color: #4c1b1b;
 }
-
      /*credit to http://veli.ee/lab/csspacman/ for the pacman animation framework*/
      .wrapper{
           max-width:800px;
@@ -156,6 +188,8 @@ footer {
           border-radius: 50px;
           clip: rect(0px, 50px, 100px, 0px);
           z-index:2;
+
+
      }
      .pacman-mouth {
           position: absolute;
@@ -197,6 +231,7 @@ footer {
           -moz-animation-delay:0.2s;
           -webkit-animation-delay:0.2s;
           animation-delay:0.2s;
+
      }
 
      @-moz-keyframes munch
