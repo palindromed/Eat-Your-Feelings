@@ -1,17 +1,46 @@
-body{
-    background-color: #F6E497;
-}
-h1 {
-    font-size: 4.0rem;
-    line-height: 1.2;
-    letter-spacing: -.1rem;
-    text-align: center;
-}
 article {
     font-size: 1.5rem;
     line-height: 1.6;
     letter-spacing: 0;
-
+}
+body {
+  background-color: #b9121b;
+}
+h1 {
+  color: #4c1b1b;
+  background-color: #f6e497;
+  border-radius: 8em;
+  text-align: center;
+}
+section {
+}
+#midsection {
+  content: ;
+}
+#leftsection {
+  height: 19em;
+}
+p {
+  color: #f6e497;
 }
 
+button {
+  text-align: center;
+  padding:2px 4px 2px 4px;
+  background-color: #f6e497;
+  border: 1px solid #4c1b1b;
+  color:#000;
+  text-decoration:none;
+  border-radius: 10em;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  font: #4c1b1b;
+  background-color: #f6e497;
+  border-radius: 8em;
+  text-align: center;
+}
 
