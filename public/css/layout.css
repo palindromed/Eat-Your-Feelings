@@ -10,41 +10,125 @@ h1 {
   background-color: #f6e497;
   border-radius: 8em;
   text-align: center;
+  border-color: #4c1b1b;
+  -moz-box-shadow: 6px 6px 10px 1px #422e13;
+  -webkit-box-shadow: 6px 6px 10px 1px #422e13;
+  box-shadow: 6px 6px 10px 1px #422e13;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6e497), color-stop(1, #8a642f));
+  background:-moz-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-webkit-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-o-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-ms-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:linear-gradient(to bottom, #f6e497 5%, #8a642f 120%);
 }
-main {
+article p {
+  font-style: italic;
+}
+#nameform{
+  color: #f6e497;
+  font-style: italic;
+}
+.getstarted {
+  -moz-box-shadow: 8px 8px 12px 1px #422e13;
+  -webkit-box-shadow: 8px 8px 12px 1px #422e13;
+  box-shadow: 8px 8px 12px 1px #422e13;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bd8d46), color-stop(1, #8a642f));
+  background:-moz-linear-gradient(top, #bd8d46 5%, #8a642f 100%);
+  background:-webkit-linear-gradient(top, #bd8d46 5%, #8a642f 100%);
+  background:-o-linear-gradient(top, #bd8d46 5%, #8a642f 100%);
+  background:-ms-linear-gradient(top, #bd8d46 5%, #8a642f 100%);
+  background:linear-gradient(to bottom, #bd8d46 5%, #8a642f 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bd8d46', endColorstr='#8a642f',GradientType=0);
+  background-color:#bd8d46;
+  -moz-border-radius:20px;
+  -webkit-border-radius:20px;
+  border-radius:20px;
+  display:inline-block;
+  cursor:pointer;
+  color:#f6e597;
+  font-size:18px;
+  font-weight:bold;
+  font-style:italic;
+  text-decoration:none;
+  text-shadow:2px 3px 2px #1c1204;
+}
+.getstarted:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #8a642f), color-stop(1, #bd8d46));
+  background:-moz-linear-gradient(top, #8a642f 5%, #bd8d46 100%);
+  background:-webkit-linear-gradient(top, #8a642f 5%, #bd8d46 100%);
+  background:-o-linear-gradient(top, #8a642f 5%, #bd8d46 100%);
+  background:-ms-linear-gradient(top, #8a642f 5%, #bd8d46 100%);
+  background:linear-gradient(to bottom, #8a642f 5%, #bd8d46 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8a642f', endColorstr='#bd8d46',GradientType=0);
+  background-color:#8a642f;
+}
+.getstarted:active {
+  position:relative;
+  top:1px;
+}
 
-}
-section {
-}
-#midsection {
-  content: ;
-}
 #leftsection {
+  font-color: #4c1b1b;
   height: 19em;
+  background-color: #bd8d46;
+  border-radius: 2em;
+  border: .1em solid;
+  border-color: #4c1b1b;
+  -moz-box-shadow: 6px 6px 10px 1px #422e13;
+  -webkit-box-shadow: 6px 6px 10px 1px #422e13;
+  box-shadow: 6px 6px 10px 1px #422e13;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6e497), color-stop(1, #8a642f));
+  background:-moz-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-webkit-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-o-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-ms-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:linear-gradient(to bottom, #f6e497 5%, #8a642f 120%);
+}
+ol {
+  padding-left: 1.75em;
+  color: #4c1b1b;
+  margin-top: 2em;
+  margin left: 2em;
+}
+li {
+  margin-left: -4.5em;
 }
 p {
   color: #f6e497;
 }
-#getstarted {
-  text-align: center;
-  padding:2px 4px 2px 4px;
-  background-color: #f6e497;
-  border: 1px solid #4c1b1b;
-  color:#000;
-  text-decoration:none;
-  border-radius: 10em;
+#rightsection {
+  margin-top: 2.5em;
 }
+#namebutton {
+
+}
+
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 10px;
-  font: #4c1b1b;
   background-color: #f6e497;
-  border-radius: 8em;
+
   text-align: center;
 }
-
+#footer {
+    border-radius: 8em;
+  color: #4c1b1b;
+  border-color: #4c1b1b;
+  -moz-box-shadow: 6px 6px 10px 1px #422e13;
+  -webkit-box-shadow: 6px 6px 10px 1px #422e13;
+  box-shadow: 6px 6px 10px 1px #422e13;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6e497), color-stop(1, #8a642f));
+  background:-moz-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-webkit-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-o-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:-ms-linear-gradient(top, #f6e497 5%, #8a642f 120%);
+  background:linear-gradient(to bottom, #f6e497 5%, #8a642f 120%);
+}
+#footer p {
+  color: #4c1b1b;
+}
      /*credit to http://veli.ee/lab/csspacman/ for the pacman animation framework*/
      .wrapper{
           max-width:800px;
@@ -76,7 +160,7 @@ footer {
           border-radius: 50px;
      }
      .dot {
-          font-color: #f6e497;
+          color: #f6e497;
           position: absolute;
           z-index:-1;
           top:40px;
@@ -104,6 +188,8 @@ footer {
           border-radius: 50px;
           clip: rect(0px, 50px, 100px, 0px);
           z-index:2;
+
+
      }
      .pacman-mouth {
           position: absolute;
@@ -145,6 +231,7 @@ footer {
           -moz-animation-delay:0.2s;
           -webkit-animation-delay:0.2s;
           animation-delay:0.2s;
+
      }
 
      @-moz-keyframes munch
