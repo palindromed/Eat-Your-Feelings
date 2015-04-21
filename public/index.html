@@ -38,31 +38,38 @@
   </article>
 </header>
 
-
 <main class="container row twelve columns offset-by-two">
-  <section id="leftsection" class="two columns">
-    <p>This will hopefully be a sidebar</p>
+  <section id="leftsection" class="three columns">
+    <ol id="instructions"><b>Instructions:</b><ol>
+      <li>Enter your name.</li>
+      <li>Click the 'Let's get started button'.</li>
+      <li>Tell us how your feeling.</li>
+      <li>Let us help you eat those feelings!</li>
+    </ol>
   </section>
-  <section id="midsection" class="five columns offset-by-one">
-    <button id="getstarted">Let's get started and eat those feelings!</button>
+  <section id="midsection" class="five columns">
+    <form name="nameform" id="nameform">
+      <label form="name">Your Name</label>
+      <input type="text" id="username" name="username" placeholder="Enter your name">
+      <button id="namebutton" type="submit" class="getstarted">Enter</button>
+    </form>
+    <button id="getstarted" class="getstarted">Let's Get Started!</button>
   </section>
-  <section class="two columns offset-by-one">
+  <section id="rightsection" class="two columns">
     <img src="images/stressed.jpeg"/>
   </section>
 </main>
-
 <section class="container row twelve columns">
 <div class="pacman-holder moving">
   <div class="pacman-container">
     <div class="pacman-body"></div>
     <div class="pacman-mouth"><div class="pacman"></div></div>
   </div>
-
   <div class="dot">FEELINGS</div>
 </div>
 </section>
 
-<footer class="container row ten columns offset-by-two">
+<footer id="footer" class="container row ten columns offset-by-two">
   <p>This is going to be the footer for relative information</p>
 </footer>
 
