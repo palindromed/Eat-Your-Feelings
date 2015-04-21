@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Feelings buttons
 
  $(function() {
