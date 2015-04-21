@@ -28,6 +28,13 @@ article p {
   color: #f6e497;
   font-style: italic;
 }
+#namebutton {
+  margin-left: 1.5em;
+}
+input {
+  color: #4c1b1b;
+  background-color: #fcfae1;
+}
 .getstarted {
   -moz-box-shadow: 8px 8px 12px 1px #422e13;
   -webkit-box-shadow: 8px 8px 12px 1px #422e13;
