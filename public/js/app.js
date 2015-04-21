@@ -1,106 +1,115 @@
 // Feelings buttons
 
- $(function() {
-    $('#happy').click(function() {
-      $('#happy').fadeOut("slow", function() {
-      });
-      $('#sad').fadeOut("slow", function() {
-      });
-      $('#angry').fadeOut("slow", function() {
-      });
-      $('#stressed').fadeOut("slow", function() {
-      });
-      var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('three columns offset-by-two').fadeIn("slow",function(){
-      });
-      new_btn.insertAfter('#happy');
-      $('#stressed').insertAfter('#chocolate');
+$(function() {
+  $('#happy').click(function() {
+    $('#happy').fadeOut("slow", function() {
+    });
+    $('#sad').fadeOut("slow", function() {
+    });
+    $('#angry').fadeOut("slow", function() {
+    });
+    $('#stressed').fadeOut("slow", function() {
+    });
+    $('.emotions').fadeOut("slow", function(){
+    });
+    var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('emotionbutton getstarted').fadeIn("slow",function(){
+    });
+    new_btn.insertAfter('#happy');
 
-      var new_btn = $('<button id="caramel">Caramel</button>').addClass('three columns offset-by-two').fadeIn("slow",function(){
-      });
-      new_btn.insertAfter('#sad');
+    var new_btn = $('<button id="caramel">Caramel</button>').addClass('emotionbutton getstarted').fadeIn("slow",function(){
+    });
+    new_btn.insertAfter('#sad');
 
-      var new_btn = $('<button id="cake">Cake</button>').addClass('three columns offset-by-two').fadeIn("slow",function(){
-      });
-      new_btn.insertAfter('#stressed');
+    var new_btn = $('<button id="cake">Cake</button>').addClass('emotionbutton getstarted').fadeIn("slow",function(){
+    });
+    new_btn.insertAfter('#stressed');
 
-      var new_btn = $('<button id="candy">Candy</button>').addClass('three columns offset-by-two').fadeIn("slow",function(){
-      });
-      new_btn.insertAfter('#angry');
+    var new_btn = $('<button id="candy">Candy</button>').addClass('emotionbutton getstarted').fadeIn("slow",function(){
+    });
+    new_btn.insertAfter('#angry');
   });
-    $('#sad').click(function() {
-      $('#happy').fadeOut("slow", function() {
-      });
-      $('#sad').fadeOut("slow", function() {
-      });
-      $('#angry').fadeOut("slow", function() {
-      });
-      $('#stressed').fadeOut("slow",function() {
-      });
-      var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#happy');
-
-      var new_btn = $('<button id="caramel">Caramel</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#sad');
-
-      var new_btn = $('<button id="cake">Cake</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#stressed');
-
-      var new_btn = $('<button id="candy">Candy</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#angry');
+  $('#sad').click(function() {
+    $('#happy').fadeOut("slow", function() {
     });
-    $('#angry').click(function() {
-      $('#happy').fadeOut("slow", function() {
-      });
-      $('#sad').fadeOut("slow", function() {
-      });
-      $('#angry').fadeOut("slow", function() {
-      });
-      $('#stressed').fadeOut("slow",function() {
-      });
-      var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#happy');
-
-      var new_btn = $('<button id="caramel">Caramel</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#sad');
-
-      var new_btn = $('<button id="cake">Cake</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#stressed');
-
-      var new_btn = $('<button id="candy">Candy</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#angry');
+    $('#sad').fadeOut("slow", function() {
     });
-    $('#stressed').click(function() {
-      $('#happy').fadeOut("slow", function() {
-      });
-      $('#sad').fadeOut("slow", function() {
-      });
-      $('#angry').fadeOut("slow", function() {
-      });
-      $('#stressed').fadeOut("slow",function() {
-      });
-      var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#happy');
+    $('#angry').fadeOut("slow", function() {
+    });
+    $('#stressed').fadeOut("slow",function() {
+    });
+    $('.emotions').fadeOut("slow",function(){
+    });
+    var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#happy');
 
-      var new_btn = $('<button id="caramel">Caramel</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#sad');
+    var new_btn = $('<button id="caramel">Caramel</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#sad');
 
-      var new_btn = $('<button id="cake">Cake</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#stressed');
+    var new_btn = $('<button id="cake">Cake</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#stressed');
 
-      var new_btn = $('<button id="candy">Candy</button>').addClass('three columns offset-by-two').fadeIn("slow", function(){
-      });
-      new_btn.insertAfter('#angry');
+    var new_btn = $('<button id="candy">Candy</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#angry');
+  });
+  $('#angry').click(function() {
+    $('#happy').fadeOut("slow", function() {
+    });
+    $('#sad').fadeOut("slow", function() {
+    });
+    $('#angry').fadeOut("slow", function() {
+    });
+    $('#stressed').fadeOut("slow",function() {
+    });
+    $('.emotions').fadeOut("slow", function(){
+    });
+
+    var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#happy');
+
+    var new_btn = $('<button id="caramel">Caramel</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#sad');
+
+    var new_btn = $('<button id="cake">Cake</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#stressed');
+
+    var new_btn = $('<button id="candy">Candy</button>').addClass('emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#angry');
+  });
+  $('#stressed').click(function() {
+    $('#happy').fadeOut("slow", function() {
+    });
+    $('#sad').fadeOut("slow", function() {
+    });
+    $('#angry').fadeOut("slow", function() {
+    });
+    $('#stressed').fadeOut("slow",function() {
+    });
+    $('.emotions').fadeOut("slow",function(){
+    });
+
+    var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#happy');
+
+    var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#sad');
+
+    var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#stressed');
+
+    var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
+    });
+    new_btn.insertAfter('#angry');
   });
 });
 
