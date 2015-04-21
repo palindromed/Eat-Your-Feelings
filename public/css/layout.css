@@ -109,11 +109,10 @@ footer {
   width: 100%;
   padding: 10px;
   background-color: #f6e497;
-
   text-align: center;
 }
 #footer {
-    border-radius: 8em;
+  border-radius: 8em;
   color: #4c1b1b;
   border-color: #4c1b1b;
   -moz-box-shadow: 6px 6px 10px 1px #422e13;

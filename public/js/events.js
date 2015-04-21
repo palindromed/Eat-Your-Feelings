@@ -1,6 +1,4 @@
-// $(document).ready(function() {
-
-  var $userName;
+  window.$userName;
 
     $('#namebutton').on('click', function() {
       event.preventDefault();
@@ -13,5 +11,3 @@
       }
     });
 
-
-// });
