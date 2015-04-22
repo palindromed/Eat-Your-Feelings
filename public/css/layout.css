@@ -479,3 +479,10 @@ button {
 .recipes {
   margin-top:-3em;
 }
+.ingredient {
+  margin: 3em 10em -1.5em 5em;
+  margin-left: 5em;
+  margin-right: 10em;
+  margin-bottom: -1.5em;
+  margin-top: 3em;
+}

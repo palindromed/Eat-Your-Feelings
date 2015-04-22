@@ -28,7 +28,7 @@ var replaceEmotion = function() {
             <button class="ingredientbutton getstarted" id="cake">Blueberries</button><img src="images/cake.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.png" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.jpeg" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('.ingredientbutton').on('click', function(){
@@ -38,7 +38,7 @@ var replaceEmotion = function() {
         }
         if ($currentEmotion === 'angry') {
             $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="peppers">Peppers</button><img src="images/peppers.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="bourbon">Bourbon</button><img src="images/bourbon.jpg" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="bourbon">Bourbon</button><img src="images/bourbon.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="beef">Beef</button><img src="images/beef.jpeg" class="ingredient"/>\
@@ -60,11 +60,9 @@ var replaceEmotion = function() {
                $('.ingredientbutton').on('click', function(){
                 move();
                })
-
             });
         }
     });
-
   }
 
 
