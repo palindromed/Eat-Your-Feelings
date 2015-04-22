@@ -15,7 +15,7 @@ var move = function(){
 var replaceEmotion = function() {
     $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
-            $('#firstset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
+            $('#firstset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'bananas\')" class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
@@ -45,7 +45,7 @@ var replaceEmotion = function() {
             $('#firstset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'peppers\')" class="ingredientbutton getstarted" id="peppers">Peppers</button><img src="images/peppers.jpeg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'bourbon\')"class="ingredientbutton getstarted" id="bourbon">Bourbon</button><img src="images/bourbon.jpeg" class="ingredient"/>\
             </section>');
-            $('#secondset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'nuts\')"class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
+            $('#secondset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'nuts\')"class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'beef\')" class="ingredientbutton getstarted" id="beef">Beef</button><img src="images/beef.jpeg" class="ingredient"/>\
             </section>');
             $('#pagetwosection').replaceWith('<h5>Crush that anger ' + window.localStorage.getItem('name', $userName) + ', by crushing one of these ingredients!</h5>');
@@ -56,7 +56,7 @@ var replaceEmotion = function() {
             });
         }
         if ($currentEmotion === 'stressed') {
-            $('#firstset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'pretzel\')class="ingredientbutton getstarted" id="pretzel">Pretzels</button><img src="images/pretzel.jpg" class="ingredient"/>\
+            $('#firstset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'pretzel\')class="ingredientbutton getstarted" id="pretzel">Pretzels</button><img src="images/pretzel.jpeg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'chocolate\')" class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
