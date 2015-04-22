@@ -3,10 +3,8 @@ body {
   background-color: #b9121b;
   min-height: 100%;
 }
-header {
-
-}
 h1 {
+  cursor: pointer;
   color: #4c1b1b;
   background-color: #f6e497;
   border-radius: 8em;
@@ -454,7 +452,6 @@ article {
     font-size: 1.5rem;
     line-height: 1.6;
     letter-spacing: 0;
-
 }
 
 section {
@@ -479,3 +476,6 @@ button {
   border-radius: 10em;
 }
 /*end feelings page*/
+.recipes {
+  margin-top:-3em;
+}
