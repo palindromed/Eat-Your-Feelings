@@ -74,19 +74,19 @@ var replaceEmotion = function() {
 
 
 //setting current emotion and then replace buttons with replaceEmotion button
-$('#happy').one('click', function() {
+$('#happy').on('click', function() {
     $currentEmotion = 'happy';
     replaceEmotion();
 });
-$('#sad').one('click', function() {
+$('#sad').on('click', function() {
     $currentEmotion = 'sad';
     replaceEmotion();
 });
-$('#angry').one('click', function() {
+$('#angry').on('click', function() {
     $currentEmotion = 'angry';
     replaceEmotion();
 });
-$('#stressed').one('click', function() {
+$('#stressed').on('click', function() {
     $currentEmotion = 'stressed';
     replaceEmotion();
 });
