@@ -2,11 +2,12 @@
 var $userName;
 var $currentEmotion;
 
+
 var move = function(){
   window.location.href = "locationrecipe.html";
 }
 
-
+// This function will replace 'feelings' content with 'ingredient' content
 var replaceEmotion = function() {
     $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
@@ -63,8 +64,8 @@ var replaceEmotion = function() {
             });
         }
     });
-  }
 
+  }
 
 
 //setting current emotion and then replace buttons with replaceEmotion button
@@ -88,8 +89,10 @@ $('#stressed').on('click', function() {
 //name button event listner with validation
 $('#namebutton').on('click', function() {
   event.preventDefault();
+  $userName = $('#username').val();
   if ($userName === '') {
-    $('footer').html('<p>We can\'t eat your feeelings if we don\'t know who you are!</p>')
+    $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>')
+    $("#nameform")[0].reset()
   } else {
   $userName = $('#username').val();
   window.localStorage.setItem('name', $userName);
@@ -98,7 +101,7 @@ $('#namebutton').on('click', function() {
 });
 //get started event listener
 $('#getstarted').on('click', function() {
-  if ($userName === undefined) {
+  if (!$userName) {
     $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>');
   } else {
     window.location.href = "feelings.html";
