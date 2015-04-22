@@ -22,7 +22,7 @@ var replaceEmotion = function() {
             <button class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
-              $('#test').on('click', function(){
+              $('#test').one('click', function(){
 
                 //window.ingredient = 'potatoes'
                 getRecipeJson('potatoes');
@@ -44,7 +44,7 @@ var replaceEmotion = function() {
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('.ingredientbutton').on('click', function(){
-                move();
+                //move();
                })
             });
         }
@@ -57,7 +57,7 @@ var replaceEmotion = function() {
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('.ingredientbutton').on('click', function(){
-                move();
+                //move();
                })
             });
         }
@@ -70,7 +70,7 @@ var replaceEmotion = function() {
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
                $('.ingredientbutton').on('click', function(){
-                move();
+                //move();
                })
 
             });
@@ -81,19 +81,19 @@ var replaceEmotion = function() {
 
 
 //setting current emotion and then replace buttons with replaceEmotion button
-$('#happy').on('click', function() {
+$('#happy').one('click', function() {
     $currentEmotion = 'happy';
     replaceEmotion();
 });
-$('#sad').on('click', function() {
+$('#sad').one('click', function() {
     $currentEmotion = 'sad';
     replaceEmotion();
 });
-$('#angry').on('click', function() {
+$('#angry').one('click', function() {
     $currentEmotion = 'angry';
     replaceEmotion();
 });
-$('#stressed').on('click', function() {
+$('#stressed').one('click', function() {
     $currentEmotion = 'stressed';
     replaceEmotion();
 });
