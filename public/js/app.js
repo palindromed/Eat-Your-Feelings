@@ -96,7 +96,12 @@ $('#namebutton').on('click', function() {
     $("#nameform")[0].reset()
   } else {
   $userName = $('#username').val();
-  window.localStorage.setItem('name', $userName);
+  // Capitalize first letter of username
+  function capitalize(str){
+ return str.substring(0, 1).toUpperCase() + str.substring(1);
+  };
+  window.localStorage.setItem('name', capitalize($userName));
+
   $('footer').html('<p>Welcome ' + $userName + ' !</p>');
   }
 });
@@ -109,10 +114,7 @@ $('#getstarted').on('click', function() {
   }
 });
 
-$('#pagetwosection').prepend(window.localStorage.getItem('name', $userName) + ', ');
-window.localStorage.getItem('name', $userName).toLowerCase().replace(/\b[a-z]/g, function(letter) {
-    return letter.toUpperCase();
-});
+$('#pagetwosection').prepend(window.localStorage.getItem('name') + ', ');
 
 $('h1').on('click', function() {
     window.location.href = 'index.html';
