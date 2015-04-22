@@ -12,5 +12,9 @@ $('#namebutton').on('click', function() {
 });
 
 $('#getstarted').on('click', function() {
-  window.location.href = "feelings.html";
+  if ($userName === undefined) {
+    $('footer').html('<p>We can\'t eat your feeelings if we don\'t know who you are!</p>');
+  } else {
+    window.location.href = "feelings.html";
+  }
 });
