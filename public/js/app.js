@@ -1,7 +1,7 @@
 // Feelings buttons
 var $userName;
 var $currentEmotion;
-
+// This function will replace 'feelings' content with 'ingredient' content
 var replaceEmotion = function() {
     $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
@@ -43,119 +43,6 @@ var replaceEmotion = function() {
     });
 };
 
-
-
-  // $('#happy').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow", function() {
-  //   });
-  //   $('.emotions').fadeOut("slow", function(){
-  //   });
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
-  // $('#sad').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow",function() {
-  //   });
-  //   $('.emotions').fadeOut("slow",function(){
-  //   });
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
-  // $('#angry').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow",function() {
-  //   });
-  //   $('.emotions').fadeOut("slow", function(){
-  //   });
-
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
-  // $('#stressed').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow",function() {
-  //   });
-  //   $('.emotions').fadeOut("slow",function(){
-  //   });
-
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
-
 //setting current emotion and then replace buttons with replaceEmotion button
 $('#happy').on('click', function() {
     $currentEmotion = 'happy';
@@ -177,8 +64,10 @@ $('#stressed').on('click', function() {
 //name button event listner with validation
 $('#namebutton').on('click', function() {
   event.preventDefault();
+  $userName = $('#username').val();
   if ($userName === '') {
-    $('footer').html('<p>We can\'t eat your feeelings if we don\'t know who you are!</p>')
+    $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>')
+    $("#nameform")[0].reset()
   } else {
   $userName = $('#username').val();
   window.localStorage.setItem('name', $userName);
@@ -187,7 +76,7 @@ $('#namebutton').on('click', function() {
 });
 //get started event listener
 $('#getstarted').on('click', function() {
-  if ($userName === undefined) {
+  if (!$userName) {
     $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>');
   } else {
     window.location.href = "feelings.html";
