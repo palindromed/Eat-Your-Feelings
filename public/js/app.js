@@ -54,7 +54,7 @@ var replaceEmotion = function() {
             <button class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="avacado">Avacado</button><img src="images/avacado.jpeg" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="avacado">Avocado</button><img src="images/avacado.jpeg" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
                $('.ingredientbutton').on('click', function(){
@@ -85,7 +85,6 @@ $('#stressed').on('click', function() {
     $currentEmotion = 'stressed';
     replaceEmotion();
 });
-
 //name button event listner with validation
 $('#namebutton').on('click', function() {
   event.preventDefault();
@@ -107,4 +106,6 @@ $('#getstarted').on('click', function() {
     window.location.href = "feelings.html";
   }
 });
-
+$('h1').on('click', function() {
+    window.location.href = 'index.html';
+})
