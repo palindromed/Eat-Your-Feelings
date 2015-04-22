@@ -21,6 +21,7 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>That\'s fantastic! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite snack and we\'ll keep that good mood going!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('#test').one('click', function(){
 
@@ -40,8 +41,9 @@ var replaceEmotion = function() {
             <button class="ingredientbutton getstarted" id="cake">Blueberries</button><img src="images/cake.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.png" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.jpeg" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>This has to change! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite comfort food!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('.ingredientbutton').on('click', function(){
                 //move();
@@ -50,11 +52,12 @@ var replaceEmotion = function() {
         }
         if ($currentEmotion === 'angry') {
             $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="peppers">Peppers</button><img src="images/peppers.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="bourbon">Bourbon</button><img src="images/bourbon.jpg" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="bourbon">Bourbon</button><img src="images/bourbon.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="beef">Beef</button><img src="images/beef.jpeg" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>Crush that anger ' + window.localStorage.getItem('name', $userName) + ', by crushing one of these ingredients!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('.ingredientbutton').on('click', function(){
                 //move();
@@ -66,17 +69,16 @@ var replaceEmotion = function() {
             <button class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="avacado">Avacado</button><img src="images/avacado.jpeg" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="avocado">Avocado</button><img src="images/avacado.jpeg" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>I\'m so sorry to hear that ' + window.localStorage.getItem('name', $userName) + ', choose your favorite and we\'ll help you relax!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
                $('.ingredientbutton').on('click', function(){
                 //move();
                })
-
             });
         }
     });
-
   }
 
 
@@ -97,6 +99,7 @@ $('#stressed').one('click', function() {
     $currentEmotion = 'stressed';
     replaceEmotion();
 });
+
 
 //API call and creation of array
 
@@ -134,8 +137,6 @@ function getRecipeJson(searchTerm) {
   });
 }
 
-
-
 //name button event listner with validation
 $('#namebutton').on('click', function() {
   event.preventDefault();
@@ -158,3 +159,12 @@ $('#getstarted').on('click', function() {
   }
 });
 
+$('#pagetwosection').prepend(window.localStorage.getItem('name', $userName) + ', ');
+// var str = window.localStorage.getItem('name', $userName);
+// str = str.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+//     return letter.toUpperCase();
+// });
+
+$('h1').on('click', function() {
+    window.location.href = 'index.html';
+})

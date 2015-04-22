@@ -3,10 +3,8 @@ body {
   background-color: #b9121b;
   min-height: 100%;
 }
-header {
-
-}
 h1 {
+  cursor: pointer;
   color: #4c1b1b;
   background-color: #f6e497;
   border-radius: 8em;
@@ -25,6 +23,7 @@ h1 {
 h5 {
   color: #fcfae1;
   text-align: center;
+  font-style: italic;
 }
 #sad {
   margin-left: 3.7em;
@@ -454,7 +453,6 @@ article {
     font-size: 1.5rem;
     line-height: 1.6;
     letter-spacing: 0;
-
 }
 
 section {
@@ -479,3 +477,13 @@ button {
   border-radius: 10em;
 }
 /*end feelings page*/
+.recipes {
+  margin-top:-3em;
+}
+.ingredient {
+  margin: 3em 10em -1.5em 5em;
+  margin-left: 5em;
+  margin-right: 10em;
+  margin-bottom: -1.5em;
+  margin-top: 3em;
+}
