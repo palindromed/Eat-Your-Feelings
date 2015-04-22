@@ -83,3 +83,8 @@ $('#getstarted').on('click', function() {
   }
 });
 
+$('#pagetwosection').prepend(window.localStorage.getItem('name', $userName) + ', ');
+var str = window.localStorage.getItem('name', $userName);
+str = str.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+    return letter.toUpperCase();
+});
