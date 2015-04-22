@@ -11,6 +11,7 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>That\'s fantastic! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite snack and we\'ll keep that good mood going!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){});
         }
         if ($currentEmotion === 'sad') {
@@ -20,6 +21,7 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.png" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>This has to change! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite comfort food!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){});
         }
         if ($currentEmotion === 'angry') {
@@ -29,6 +31,7 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="beef">Beef</button><img src="images/beef.jpeg" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>Crush that anger ' + window.localStorage.getItem('name', $userName) + ', by crushing one of these ingredients!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){});
         }
         if ($currentEmotion === 'stressed') {
@@ -36,8 +39,9 @@ var replaceEmotion = function() {
             <button class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="avacado">Avacado</button><img src="images/avacado.jpeg" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="avocado">Avocado</button><img src="images/avacado.jpeg" class="ingredient"/>\
             </section>');
+            $('#pagetwosection').replaceWith('<h5>I\'m so sorry to hear that ' + window.localStorage.getItem('name', $userName) + ', choose your favorite and we\'ll help you relax!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){});
         }
     });
@@ -88,3 +92,5 @@ var str = window.localStorage.getItem('name', $userName);
 str = str.toLowerCase().replace(/\b[a-z]/g, function(letter) {
     return letter.toUpperCase();
 });
+
+
