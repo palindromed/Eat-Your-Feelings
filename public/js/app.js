@@ -1,6 +1,10 @@
 // Feelings buttons
 var $userName;
 var $currentEmotion;
+window.ingredient;
+window.recipeArray = [];
+var recipes;
+
 
 
 var move = function(){
@@ -18,8 +22,16 @@ var replaceEmotion = function() {
             <button class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
-              $('.ingredientbutton').on('click', function(){
-                move();
+              $('#test').on('click', function(){
+
+                //window.ingredient = 'potatoes'
+                getRecipeJson('potatoes');
+                //window.localStorage.setItem('array', window.recipeArray);
+                 //move();
+                //console.log(window.recipeArray);
+
+
+
                })
             });
         }
@@ -85,6 +97,44 @@ $('#stressed').on('click', function() {
     $currentEmotion = 'stressed';
     replaceEmotion();
 });
+
+//API call and creation of array
+
+
+
+function getRecipeJson(searchTerm) {
+
+  var Recipe = function(info){
+    this.name = info.Title,
+    this.image = info.ImageURL,
+    this.web = info.WebURL
+   }
+
+  var apiKey = "dvxTzcHziZpKgfz9rxpuA9i3Qh10wNK3";
+  var titleKeyword = '"' + searchTerm +'"';
+  var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+                  + titleKeyword
+                  + "&api_key="+apiKey;
+
+  $.ajax({
+    type: "GET",
+    dataType: 'json',
+    cache: false,
+    url: url,
+    success: function (data) {
+      var data = (data.Results);
+      console.dir(data);
+      return;
+      // for(i=0; i < data.length; i++) {
+      //   window.recipeArray.push(new Recipe(data[i]));
+      // }
+       //console.log(window.recipeArray);
+    }
+
+  });
+}
+
+
 
 //name button event listner with validation
 $('#namebutton').on('click', function() {
