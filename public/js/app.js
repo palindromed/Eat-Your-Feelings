@@ -2,6 +2,11 @@
 var $userName;
 var $currentEmotion;
 
+var move = function(){
+  window.location.href = "locationrecipe.html";
+}
+
+
 var replaceEmotion = function() {
     $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
@@ -11,7 +16,11 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
-            $('.ingredientbutton').fadeIn('slow', function(){});
+            $('.ingredientbutton').fadeIn('slow', function(){
+              $('.ingredientbutton').on('click', function(){
+                move();
+               })
+            });
         }
         if ($currentEmotion === 'sad') {
             $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
@@ -20,7 +29,11 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.png" class="ingredient"/>\
             </section>');
-            $('.ingredientbutton').fadeIn('slow', function(){});
+            $('.ingredientbutton').fadeIn('slow', function(){
+              $('.ingredientbutton').on('click', function(){
+                move();
+               })
+            });
         }
         if ($currentEmotion === 'angry') {
             $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="peppers">Peppers</button><img src="images/peppers.jpeg" class="ingredient"/>\
@@ -29,7 +42,11 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="beef">Beef</button><img src="images/beef.jpeg" class="ingredient"/>\
             </section>');
-            $('.ingredientbutton').fadeIn('slow', function(){});
+            $('.ingredientbutton').fadeIn('slow', function(){
+              $('.ingredientbutton').on('click', function(){
+                move();
+               })
+            });
         }
         if ($currentEmotion === 'stressed') {
             $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="pretzel">Pretzels</button><img src="images/pretzel.jpg" class="ingredient"/>\
@@ -38,123 +55,17 @@ var replaceEmotion = function() {
             $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="avacado">Avacado</button><img src="images/avacado.jpeg" class="ingredient"/>\
             </section>');
-            $('.ingredientbutton').fadeIn('slow', function(){});
+            $('.ingredientbutton').fadeIn('slow', function(){
+               $('.ingredientbutton').on('click', function(){
+                move();
+               })
+
+            });
         }
     });
-};
+  }
 
 
-
-  // $('#happy').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow", function() {
-  //   });
-  //   $('.emotions').fadeOut("slow", function(){
-  //   });
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow",function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
-  // $('#sad').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow",function() {
-  //   });
-  //   $('.emotions').fadeOut("slow",function(){
-  //   });
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
-  // $('#angry').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow",function() {
-  //   });
-  //   $('.emotions').fadeOut("slow", function(){
-  //   });
-
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
-  // $('#stressed').click(function() {
-  //   $('#happy').fadeOut("slow", function() {
-  //   });
-  //   $('#sad').fadeOut("slow", function() {
-  //   });
-  //   $('#angry').fadeOut("slow", function() {
-  //   });
-  //   $('#stressed').fadeOut("slow",function() {
-  //   });
-  //   $('.emotions').fadeOut("slow",function(){
-  //   });
-
-  //   var new_btn = $('<button id="chocolate">Chocolate</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#happy');
-
-  //   var new_btn = $('<button id="caramel">Caramel</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#sad');
-
-  //   var new_btn = $('<button id="cake">Cake</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#stressed');
-
-  //   var new_btn = $('<button id="candy">Candy</button>').addClass('two columns emotionbutton getstarted').fadeIn("slow", function(){
-  //   });
-  //   new_btn.insertAfter('#angry');
-  // });
 
 //setting current emotion and then replace buttons with replaceEmotion button
 $('#happy').on('click', function() {
