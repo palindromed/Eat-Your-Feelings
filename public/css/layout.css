@@ -426,34 +426,25 @@ footer {
 /*
 location recipe page*/
 
-#color {
-  background-color: #fff000;
-}
-
-#recipe {
-  margin: 1em 0em 1em 0em;
-}
-
-#image {
-  height: 10em;
-  width: 12em;
-  box-shadow: .2em .2em .2em #ff0000;
-}
-
-#location {
-  position: relative;
-}
-
 #captions {
   margin-left: .5em;
   margin-right: .5em;
 }
 
-#map {
-  height: 15em;
-  width: 35em;
+#outputs {
+  height: 20em;
+  width: 20em;
   box-shadow: .2em .2em .2em #ff0000;
+   margin: 3em 10em -1.5em 5em;
+  margin-left: 5em;
+  margin-right: 10em;
+  margin-bottom: -1.5em;
+  margin-top: 3em;
 }
+figcaption {
+  text-align: center;
+}
+
 
 /*end recipe location page*/
 
@@ -463,6 +454,7 @@ article {
     font-size: 1.5rem;
     line-height: 1.6;
     letter-spacing: 0;
+
 }
 
 section {
