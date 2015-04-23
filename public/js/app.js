@@ -1,18 +1,19 @@
 // Feelings buttons
 var $userName;
 var $currentEmotion;
-window.ingredient;
+//window.ingredient;
 window.recipeArray = [];
 var recipes;
 
-
-
 var move = function(){
   window.location.href = "locationrecipe.html";
+  render();
 }
 
 // This function will replace 'feelings' content with 'ingredient' content
 var replaceEmotion = function() {
+    $('.emotions').fadeOut('slow', function(){
+    });
     $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
 
@@ -38,7 +39,6 @@ var replaceEmotion = function() {
             $('#pagetwosection').replaceWith('<h5>This has to change! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite comfort food!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('.ingredientbutton').on('click', function(){
-                //move();
                })
             });
         }
@@ -52,7 +52,6 @@ var replaceEmotion = function() {
             $('#pagetwosection').replaceWith('<h5>Crush that anger ' + window.localStorage.getItem('name', $userName) + ', by crushing one of these ingredients!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
               $('.ingredientbutton').on('click', function(){
-                //move();
                })
             });
         }
@@ -66,7 +65,6 @@ var replaceEmotion = function() {
             $('#pagetwosection').replaceWith('<h5>I\'m so sorry to hear that ' + window.localStorage.getItem('name', $userName) + ', choose your favorite and we\'ll help you relax!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
                $('.ingredientbutton').on('click', function(){
-                //move();
                })
             });
         }
@@ -74,19 +72,19 @@ var replaceEmotion = function() {
   }
 
 //setting current emotion and then replace buttons with replaceEmotion button
-$('#happy').one('click', function() {
+$('#happy').on('click', function() {
     $currentEmotion = 'happy';
     replaceEmotion();
 });
-$('#sad').one('click', function() {
+$('#sad').on('click', function() {
     $currentEmotion = 'sad';
     replaceEmotion();
 });
-$('#angry').one('click', function() {
+$('#angry').on('click', function() {
     $currentEmotion = 'angry';
     replaceEmotion();
 });
-$('#stressed').one('click', function() {
+$('#stressed').on('click', function() {
     $currentEmotion = 'stressed';
     replaceEmotion();
 });
@@ -94,19 +92,26 @@ $('#stressed').one('click', function() {
 
 //API call and creation of array
 
+var processing = function(response) {
+  var tests = response.Results;
+  for(i=0; i < tests.length; i++) {
+    recipeArray.push(new Recipe(tests[i]))
+  }
+window.localStorage.setItem('array', JSON.stringify(recipeArray));
+move();
+}
 
-
-function getRecipeJson(searchTerm) {
-
-  var Recipe = function(info){
+var Recipe = function(info){
     this.name = info.Title,
     this.image = info.ImageURL,
     this.web = info.WebURL
    }
 
+
+function getRecipeJson(searchTerm) {
   var apiKey = "dvxTzcHziZpKgfz9rxpuA9i3Qh10wNK3";
   var titleKeyword = '"' + searchTerm +'"';
-  var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+  var url = "http://api.bigoven.com/recipes?pg=1&rpp=5&title_kw="
                   + titleKeyword
                   + "&api_key="+apiKey;
 
@@ -116,17 +121,11 @@ function getRecipeJson(searchTerm) {
     cache: false,
     url: url,
     success: function (data) {
-      var data = (data.Results);
-      console.dir(data);
-      return;
-      // for(i=0; i < data.length; i++) {
-      //   window.recipeArray.push(new Recipe(data[i]));
-      // }
-       //console.log(window.recipeArray);
-    }
+      processing(data);
+      }
+    })
+  };
 
-  });
-}
 
 //name button event listner with validation
 $('#namebutton').on('click', function() {
@@ -137,7 +136,12 @@ $('#namebutton').on('click', function() {
     $("#nameform")[0].reset()
   } else {
   $userName = $('#username').val();
-  window.localStorage.setItem('name', $userName);
+  // Capitalize first letter of username
+  function capitalize(str){
+ return str.substring(0, 1).toUpperCase() + str.substring(1);
+  };
+  window.localStorage.setItem('name', capitalize($userName));
+
   $('footer').html('<p>Welcome ' + $userName + ' !</p>');
   }
 });
@@ -150,12 +154,40 @@ $('#getstarted').on('click', function() {
   }
 });
 
-$('#pagetwosection').prepend(window.localStorage.getItem('name', $userName) + ', ');
-// var str = window.localStorage.getItem('name', $userName);
-// str = str.toLowerCase().replace(/\b[a-z]/g, function(letter) {
-//     return letter.toUpperCase();
-// });
+$('#pagetwosection').prepend(window.localStorage.getItem('name') + ', ');
 
 $('h1').on('click', function() {
     window.location.href = 'index.html';
+
 })
+
+
+var render = function(){
+  var recipeArray= JSON.parse(window.localStorage.getItem('array'));
+
+  var randomize = function(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
+
+  var picks = function(){
+    $('#contains').replaceWith('<section class="recipes"><figure class="four columns"><img src=" '+recipeArray[TL].image +'" \
+     id="outputs"/><figcaption>' + recipeArray[TL].name +'</figcaption></figure>\
+    <figure class="four columns"><img src="'+ recipeArray[TR].image + '" id="outputs"/><figcaption>'+ recipeArray[TR].name+
+    '</figcaption></figure></section><section class="recipes"><figure class="four columns"><img src=" '+recipeArray[BL].image +'" \
+     id="outputs"/><figcaption>' + recipeArray[BL].name +'</figcaption></figure>\
+    <figure class="four columns"><img src="'+ recipeArray[BR].image + '" id="outputs"/><figcaption>'+ recipeArray[BR].name+
+    '</figcaption></figure></section>')
+  }
+
+  var TL =randomize(0, recipeArray.length);
+  var TR = randomize(0, recipeArray.length);
+  var BL = randomize(0, recipeArray.length);
+  var BR = randomize(0, recipeArray.length);
+  picks();
+
+
+
+
+
+};
+
