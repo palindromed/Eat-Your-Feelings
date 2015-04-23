@@ -150,6 +150,7 @@ $('#getstarted').on('click', function() {
   }
 });
   $('#pagetwosection').prepend(window.localStorage.getItem('name') + ', ');
+
   $('h1').on('click', function() {
     window.location.href = 'index.html';
   })
