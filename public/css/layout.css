@@ -1,7 +1,10 @@
 /*Index page*/
 body {
   background-color: #b9121b;
-  min-height: 100%;
+  max-height: 100%;
+}
+header {
+  margin-top:2px;
 }
 h1 {
   cursor: pointer;
@@ -23,7 +26,8 @@ h1 {
 h5 {
   color: #fcfae1;
   text-align: center;
-  font-style: italic;
+  text-decoration: italic;
+
 }
 #sad {
   margin-left: 3.7em;
@@ -114,25 +118,32 @@ li {
 p {
   color: #f6e497;
 }
+#feelingsarticle {
+  margin-left: 30px;
+}
+.firstset {
+  margin-top: -15px;
+  margin-left: -125px;
+}
+.secondset {
+  margin-top: 40px;
+  margin-left: -125px;
+  margin-bottom: 55px;
+ }
 .emotions {
   margin: 3em 10em -1.5em 5em;
-  margin-left: 5em;
-  margin-right: 10em;
+  margin-left: 4em;
+  margin-right: 5em;
   margin-bottom: -1.5em;
-  margin-top: 3em;
+}
+.ingredients {
+
 }
 .ingredient {
   margin: 3em 10em -1.5em 5em;
-  margin-left: 5em;
-  margin-right: 10em;
+  margin-left: 2em;
+  margin-right: 8em;
   margin-bottom: -1.5em;
-  margin-top: 3em;
-}
-#rightsection {
-  margin-top: 2.5em;
-}
-.feelings {
-  height: 525px;
 }
 
 #feelingstressed {
@@ -186,9 +197,11 @@ footer {
   padding: 10px;
   background-color: #f6e497;
   text-align: center;
-  height: 42px;
+  height: 50px;
 }
 #footer {
+  text-align: center;
+  height: 50px;
   border-radius: 8em;
   color: #4c1b1b;
   border-color: #4c1b1b;
@@ -240,9 +253,6 @@ article {
 
 section {
 }
-#midsection {
-  content: ;
-}
 
 p {
   color: #f6e497;
@@ -284,6 +294,12 @@ button {
 }
 #beef {
   margin-left: 50px;
+}
+#avocado {
+  margin-left: -10px;
+}
+#pretzel {
+  margin-left: 44px;
 }
 /*PACMAN IS BELOW HERE*?
 /*credit to http://veli.ee/lab/csspacman/ for the pacman animation framework*/
