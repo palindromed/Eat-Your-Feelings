@@ -14,28 +14,17 @@ var replaceEmotion = function() {
     $('.emotions').fadeOut('slow', function(){
     });
     $('.emotionbutton').fadeOut('slow', function() {
+      $('#firstset').fadeIn('slow', function{
         if ($currentEmotion === 'happy') {
-
-          var div = $('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic2"/>\
+            $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic2"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
-          $(this).replaceWith(div);
-          $('.twelve columns firstset ingredientbutton getstarted').fadeIn(5000);
 
-            // $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic2"/>\
-            // <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
-            // </section>');
-
-          var div2 = $('<section id="ingredients" class="twelve columns secondset"><button onclick="getRecipeJson(\'bananas\')" class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
+            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button onclick="getRecipeJson(\'bananas\')" class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'potatoes\')"class="ingredientbutton getstarted" id="potatos">Potatoes</button><img src="images/potatos.jpeg" class="ingredient"/>\
-            </section>');
-            $(this).replaceWith(div2);
-            $('.twelve columns secondset ingredientbutton getstarted').fadeIn(5000);
-            // $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button onclick="getRecipeJson(\'bananas\')" class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
-            // <button onclick="getRecipeJson(\'potatoes\')"class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             // </section>');
             $('#pagetwosection').replaceWith('<h5>That\'s fantastic! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite snack and we\'ll keep that good mood going!</h5>');
-            $('.ingredientbutton').fadeIn('slow', function(){
+            $('#firstset').fadeIn('slow', function(){
               $('#test').one('click', function(){
                })
             });
@@ -81,6 +70,7 @@ var replaceEmotion = function() {
         }
     });
   }
+
 
 //setting current emotion and then replace buttons with replaceEmotion button
 $('#happy').on('click', function() {
