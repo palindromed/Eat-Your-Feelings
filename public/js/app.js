@@ -17,7 +17,6 @@ $(function() {
     });
     $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
-
             $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic2"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
@@ -75,18 +74,26 @@ $(function() {
   //setting current emotion and then replace buttons with replaceEmotion button
   $('#happy').on('click', function() {
     $currentEmotion = 'happy';
+    $('body').attr('id', 'feelinghappy');
+    window.localStorage.setItem('currentEmotion', 'happy');
     replaceEmotion();
   });
   $('#sad').on('click', function() {
     $currentEmotion = 'sad';
+    $('body').attr('id', 'feelingsad');
+    window.localStorage.setItem('currentEmotion', 'sad');
     replaceEmotion();
   });
   $('#angry').on('click', function() {
     $currentEmotion = 'angry';
+    $('body').attr('id', 'feelingangry');
+    window.localStorage.setItem('currentEmotion', 'angry');
     replaceEmotion();
   });
   $('#stressed').on('click', function() {
     $currentEmotion = 'stressed';
+    $('body').attr('id', 'feelingstressed');
+    window.localStorage.setItem('currentEmotion', 'stressed');
     replaceEmotion();
   });
 

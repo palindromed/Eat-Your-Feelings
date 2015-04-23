@@ -12,7 +12,23 @@
   <link rel="stylesheet" type="text/css" href="css/skeleton.css">
   <link rel="stylesheet" type="text/css" href="css/layout.css">
 </head>
-<body  >
+<body id="backdrop">
+  <script>
+  window.onload = function() {
+    var color = window.localStorage.getItem('currentEmotion');
+      if (color == 'happy') {
+        $('body').attr('id', 'feelinghappy');
+      } else if (color == 'sad') {
+        $('body').attr('id', 'feelingsad');
+      } else if (color == 'angry') {
+        $('body').attr('id', 'feelingangry');
+      } else if (color == 'stressed') {
+        $('body').attr('id', 'feelingstressed');
+      } else {
+          console.log('help');
+    }
+  };
+      </script>
   <header class="container row twelve columns offset-by-two">
     <h1>Eat Your Feelings</h1>
   </header>
