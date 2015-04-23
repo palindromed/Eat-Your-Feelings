@@ -13,7 +13,7 @@ var move = function(){
 
 // This function will replace 'feelings' content with 'ingredient' content
 var replaceEmotion = function() {
-    $('.emotionbutton').fadeOut('slow', function() {
+    $('.emotionbutton .emotions').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
             $('#firstset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
