@@ -13,7 +13,9 @@ var move = function(){
 
 // This function will replace 'feelings' content with 'ingredient' content
 var replaceEmotion = function() {
-    $('.emotionbutton .emotions').fadeOut('slow', function() {
+    $('.emotions').fadeOut('slow', function(){
+    });
+    $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
             $('#firstset').replaceWith('<section id="ingredientsone"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
@@ -151,10 +153,6 @@ $('#getstarted').on('click', function() {
 });
 
 $('#pagetwosection').prepend(window.localStorage.getItem('name', $userName) + ', ');
-// var str = window.localStorage.getItem('name', $userName);
-// str = str.toLowerCase().replace(/\b[a-z]/g, function(letter) {
-//     return letter.toUpperCase();
-// });
 
 $('h1').on('click', function() {
     window.location.href = 'index.html';
