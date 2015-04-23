@@ -13,13 +13,15 @@ $(function () {
 
   var picks = function(){
     $('#contains').replaceWith('<section class="recipes"><figure class="four columns">\
-      <a href="'+ recipeArray[TL].web +'"><img src=" '+ recipeArray[TL].image +'"id="outputs"/></a><figcaption>' + recipeArray[TL].name +
-      '</figcaption></figure><figure class="four columns"><a href="'+ recipeArray[TR].web +'"><img src="'+ recipeArray[TR].image +
+      <a href="'+ recipeArray[TL].web +'" target="_blank"><img src=" '+ recipeArray[TL].image +'"id="outputs"/></a><figcaption>'
+       + recipeArray[TL].name +'</figcaption></figure><figure class="four columns"><a href="'
+       + recipeArray[TR].web +'" target="_blank"><img src="'+ recipeArray[TR].image +
       '" id="outputs"/></a><figcaption>'+ recipeArray[TR].name +'</figcaption></figure></section>\
-      <section class="recipes"><figure class="four columns"><a href="'+ recipeArray[BL].web +'"><img src=" '+ recipeArray[BL].image +
-      '"id="outputs"/></a><figcaption>' + recipeArray[BL].name +
-      '</figcaption></figure><figure class="four columns"><a href="'+ recipeArray[BR].web +'"><img src="'+ recipeArray[BR].image +
-      '" id="outputs"/></a><figcaption>'+ recipeArray[BR].name + '</figcaption></figure></section>')
+      <section class="recipes"><figure class="four columns"><a href="'+ recipeArray[BL].web +
+      '" target="_blank"><img src=" '+ recipeArray[BL].image + '"id="outputs"/></a><figcaption>' + recipeArray[BL].name +
+      '</figcaption></figure><figure class="four columns"><a href="'+ recipeArray[BR].web +'" target="_blank"><img src="'
+      + recipeArray[BR].image + '" id="outputs"/></a><figcaption>'+ recipeArray[BR].name + '</figcaption></figure></section>')
+
   }
 
   var randomize = function() {
