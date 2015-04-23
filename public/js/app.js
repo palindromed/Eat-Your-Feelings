@@ -7,8 +7,11 @@ var recipes;
 
 var move = function(){
   window.location.href = "locationrecipe.html";
-  render();
-};
+  $(window).load(function(){
+
+    render();
+  })
+}
 
 // This function will replace 'feelings' content with 'ingredient' content
 var replaceEmotion = function() {
@@ -184,10 +187,6 @@ var render = function(){
   var BL = randomize(0, recipeArray.length);
   var BR = randomize(0, recipeArray.length);
   picks();
-
-
-
-
 
 };
 
