@@ -27,7 +27,9 @@ h5 {
   color: #fcfae1;
   text-align: center;
   text-decoration: italic;
-
+}
+.recipeheader {
+margin-left: -15em;
 }
 #sad {
   margin-left: 3.7em;
@@ -232,21 +234,20 @@ footer {
   width: 20em;
   box-shadow: .2em .2em .2em #000000;
   margin: 3em 10em -1.5em 5em;
-  margin-left: 5em;
+  margin-left: 9em;
   margin-right: 10em;
   margin-bottom: -1.5em;
   margin-top: 3em;
 }
 figcaption {
   text-align: center;
-  color: #ffffff;
-  margin-top: 1em;
-  margin-left: 7em;
-  margin-right: .5em;
+  color: #fcfae1;
+  margin-top: 2em;
+  margin-left: 9em;
+  margin-right: -9.5em;
   text-shadow: .2em .2em .2em #000000;
   font-style: bold;
 }
-
 
 /*end recipe location page*/
 
@@ -277,6 +278,7 @@ button {
 /*end feelings page*/
 .recipes {
   margin-top:-3em;
+  display: flex;
 }
 #nutpic2 {
   padding-left: 32.5px;
