@@ -9,10 +9,6 @@ var recipes;
 
 var move = function(){
   window.location.href = "locationrecipe.html";
-  $(window).load(function(){
-
-    render();
-  })
 }
 
 // This function will replace 'feelings' content with 'ingredient' content
