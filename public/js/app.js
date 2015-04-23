@@ -3,7 +3,6 @@ $(function() {
   // Feelings buttons
   var $userName;
   var $currentEmotion;
-  //window.ingredient;
   window.recipeArray = [];
   var recipes;
   var getRecipeJson = window.getRecipeJson;
@@ -93,14 +92,13 @@ $(function() {
 
 
 //API call and creation of array
-
   var processing = function(response) {
     var tests = response.Results;
     for(i=0; i < tests.length; i++) {
       recipeArray.push(new Recipe(tests[i]))
     }
-  window.localStorage.setItem('array', JSON.stringify(recipeArray));
-  move();
+    window.localStorage.setItem('array', JSON.stringify(recipeArray));
+    move();
   }
 
   var Recipe = function(info){
