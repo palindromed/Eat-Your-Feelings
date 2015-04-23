@@ -23,7 +23,7 @@ $(function() {
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button onclick="getRecipeJson(\'bananas\')" class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
-            <button onclick="getRecipeJson(\'potatoes\')"class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
+            <button onclick="getRecipeJson(\'potatoes\')"class="ingredientbutton getstarted" id="potatos">Potatoes</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
             $('#pagetwosection').replaceWith('<h5>That\'s fantastic! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite snack and we\'ll keep that good mood going!</h5>');
             $('.ingredientbutton').fadeIn('slow', function(){
