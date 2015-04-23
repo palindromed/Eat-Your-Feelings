@@ -112,7 +112,7 @@ $(function() {
   window.getRecipeJson = function (searchTerm) {
     var apiKey = "dvxTzcHziZpKgfz9rxpuA9i3Qh10wNK3";
     var titleKeyword = '"' + searchTerm +'"';
-    var url = "https://api.bigoven.com/recipes?pg=1&rpp=5&title_kw="
+    var url = "https://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
                   + titleKeyword
                   + "&api_key="+apiKey;
 
