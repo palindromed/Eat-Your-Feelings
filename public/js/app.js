@@ -138,7 +138,7 @@ $('#namebutton').on('click', function() {
     return str.substring(0, 1).toUpperCase() + str.substring(1);
   };
   window.localStorage.setItem('name', capitalize($userName));
-  $('footer').html('<p>Welcome ' + $userName + ' !</p>');
+  $('footer').html('<p>Welcome ' + window.localStorage.getItem('name') + ' !</p>');
   }
 });
 //get started event listener
