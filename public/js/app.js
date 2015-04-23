@@ -11,10 +11,10 @@ var move = function(){
 var replaceEmotion = function() {
     $('.emotionbutton').fadeOut('slow', function() {
         if ($currentEmotion === 'happy') {
-            $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic2"/>\
+            $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic2"/>\
             <button class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
-            $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
+            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
@@ -24,10 +24,10 @@ var replaceEmotion = function() {
             });
         }
         if ($currentEmotion === 'sad') {
-            $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
+            $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="cake">Cake</button><img src="images/cake.jpeg" class="ingredient"/>\
             </section>');
-            $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient" id="pizzapic"/>\
+            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient" id="pizzapic"/>\
             <button class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.jpeg" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
@@ -37,10 +37,10 @@ var replaceEmotion = function() {
             });
         }
         if ($currentEmotion === 'angry') {
-            $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="peppers">Peppers</button><img src="images/peppers.jpeg" class="ingredient"/>\
+            $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button class="ingredientbutton getstarted" id="peppers">Peppers</button><img src="images/peppers.jpeg" class="ingredient"/>\
             <button class="ingredientbutton getstarted" id="bourbon">Bourbon</button><img src="images/bourbon.jpeg" class="ingredient"/>\
             </section>');
-            $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic"/>\
+            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic"/>\
             <button class="ingredientbutton getstarted" id="beef">Beef</button><img src="images/beef.jpeg" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
@@ -50,11 +50,11 @@ var replaceEmotion = function() {
             });
         }
         if ($currentEmotion === 'stressed') {
-            $('#firstset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="pretzel">Pretzels</button><img src="images/pretzel.jpg" class="ingredient"/>\
+            $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button class="ingredientbutton getstarted" >Pretzels</button><img src="images/pretzel.jpeg" class="ingredient" id="pretzel"/>\
             <button class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
-            $('#secondset').replaceWith('<section id="ingredientsone"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
-            <button class="ingredientbutton getstarted" id="avacado">Avocado</button><img src="images/avacado.jpeg" class="ingredient"/>\
+            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
+            <button class="ingredientbutton getstarted" id="avacado">Avocado</button><img src="images/avacado.jpeg" id="avocado" class="ingredient"/>\
             </section>');
             $('.ingredientbutton').fadeIn('slow', function(){
                $('.ingredientbutton').on('click', function(){
