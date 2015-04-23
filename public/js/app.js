@@ -20,7 +20,7 @@ var replaceEmotion = function() {
             $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'nuts\')" class="ingredientbutton getstarted" id="nuts">Nuts</button><img src="images/nuts.jpeg" class="ingredient" id="nutpic2"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
-            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'bananas\')" class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
+            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button onclick="getRecipeJson(\'bananas\')" class="ingredientbutton getstarted" id="banana">Banana</button><img src="images/banana.jpeg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'potatoes\')"class="ingredientbutton getstarted" id="potatos">Potatos</button><img src="images/potatos.jpeg" class="ingredient"/>\
             </section>');
             $('#pagetwosection').replaceWith('<h5>That\'s fantastic! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite snack and we\'ll keep that good mood going!</h5>');
@@ -33,7 +33,7 @@ var replaceEmotion = function() {
             $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'chocolate\')" class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
             <button onclick="getRecipeJson(\'cake\')" class="ingredientbutton getstarted" id="cake">Cake</button><img src="images/cake.jpeg" class="ingredient"/>\
             </section>');
-            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'pizza\')" class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient" id="pizzapic"/>\
+            $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button onclick="getRecipeJson(\'pizza\')" class="ingredientbutton getstarted" id="pizza">Pizza</button><img src="images/pizza.jpeg" class="ingredient" id="pizzapic"/>\
             <button onclick="getRecipeJson(\'cheese\')" class="ingredientbutton getstarted" id="cheese">Cheese</button><img src="images/cheese.jpeg" class="ingredient"/>\
             </section>');
             $('#pagetwosection').replaceWith('<h5>This has to change! ' + window.localStorage.getItem('name', $userName) + ', choose your favorite comfort food!</h5>');
@@ -56,7 +56,7 @@ var replaceEmotion = function() {
             });
         }
         if ($currentEmotion === 'stressed') {
-            $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'pretzel\') class="ingredientbutton getstarted">Pretzels</button><img src="images/pretzel.jpeg" class="ingredient" id="pretzel"/>\
+            $('#firstset').replaceWith('<section id="ingredients" class="twelve columns firstset"><button onclick="getRecipeJson(\'pretzel\')" class="ingredientbutton getstarted">Pretzels</button><img src="images/pretzel.jpeg" class="ingredient" id="pretzel"/>\
             <button onclick="getRecipeJson(\'blueberries\')" class="ingredientbutton getstarted" id="blueberries">Blueberries</button><img src="images/blueberries.jpeg" class="ingredient"/>\
             </section>');
             $('#secondset').replaceWith('<section id="ingredients" class="twelve columns secondset"><button onclick="getRecipeJson(\'chocolate\')" class="ingredientbutton getstarted" id="chocolate">Chocolate</button><img src="images/chocolate.jpeg" class="ingredient"/>\
