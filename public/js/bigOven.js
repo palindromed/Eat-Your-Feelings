@@ -1,35 +1,24 @@
-var recipeArray = [];
+$(function () {
+  var recipeArray= JSON.parse(window.localStorage.getItem('array'));
 
-function getRecipeJson(searchTerm) {
+  var randomize = function(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
 
-  var Recipe = function(info){
-    this.name = info,
-    this.image = info.ImageURL,
-    this.web = info.WebURL
-   }
+  var picks = function(){
+    $('#contains').replaceWith('<section class="recipes"><figure class="four columns">\
+      <img src=" '+recipeArray[TL].image +'"id="outputs"/><figcaption>' + recipeArray[TL].name +
+      '</figcaption></figure><figure class="four columns"><img src="'+ recipeArray[TR].image +
+      '" id="outputs"/><figcaption>'+ recipeArray[TR].name +'</figcaption></figure></section>\
+      <section class="recipes"><figure class="four columns"><img src=" '+recipeArray[BL].image +
+      '"id="outputs"/><figcaption>' + recipeArray[BL].name +'</figcaption></figure><figure class="four columns"><img src="'+ recipeArray[BR].image +
+      '" id="outputs"/><figcaption>'+ recipeArray[BR].name + '</figcaption></figure></section>')
+  }
 
-  var apiKey = "dvxTzcHziZpKgfz9rxpuA9i3Qh10wNK3";
-  var titleKeyword = '"' + searchTerm +'"';
-  var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
-                  + titleKeyword
-                  + "&api_key="+apiKey;
+  var TL =randomize(0, recipeArray.length);
+  var TR = randomize(0, recipeArray.length);
+  var BL = randomize(0, recipeArray.length);
+  var BR = randomize(0, recipeArray.length);
+  picks();
 
-  $.ajax({
-    type: "GET",
-    dataType: 'json',
-    cache: false,
-    url: url,
-    success: function (data) {
-      var data =(data.Results);
-      for(i=0; i < data.length; i++) {
-        recipeArray.push(new Recipe(data[i]))
-        console.log(recipeArray);
-      }
-    }
-  });
-}
-var recipes = getRecipeJson('pizza');
-
-
-
-
+})
