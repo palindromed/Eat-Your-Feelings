@@ -1,18 +1,19 @@
+$(function() {
 
+  // Feelings buttons
+  var $userName;
+  var $currentEmotion;
+  //window.ingredient;
+  window.recipeArray = [];
+  var recipes;
+  var getRecipeJson = window.getRecipeJson;
 
-// Feelings buttons
-var $userName;
-var $currentEmotion;
-//window.ingredient;
-window.recipeArray = [];
-var recipes;
+  var move = function(){
+    window.location.href = "locationrecipe.html";
+  }
 
-var move = function(){
-  window.location.href = "locationrecipe.html";
-}
-
-// This function will replace 'feelings' content with 'ingredient' content
-var replaceEmotion = function() {
+  // This function will replace 'feelings' content with 'ingredient' content
+  var replaceEmotion = function() {
     $('.emotions').fadeOut('slow', function(){
     });
     $('.emotionbutton').fadeOut('slow', function() {
@@ -72,93 +73,93 @@ var replaceEmotion = function() {
     });
   }
 
-//setting current emotion and then replace buttons with replaceEmotion button
-$('#happy').on('click', function() {
+  //setting current emotion and then replace buttons with replaceEmotion button
+  $('#happy').on('click', function() {
     $currentEmotion = 'happy';
     replaceEmotion();
-});
-$('#sad').on('click', function() {
+  });
+  $('#sad').on('click', function() {
     $currentEmotion = 'sad';
     replaceEmotion();
-});
-$('#angry').on('click', function() {
+  });
+  $('#angry').on('click', function() {
     $currentEmotion = 'angry';
     replaceEmotion();
-});
-$('#stressed').on('click', function() {
+  });
+  $('#stressed').on('click', function() {
     $currentEmotion = 'stressed';
     replaceEmotion();
-});
+  });
 
 
 //API call and creation of array
 
-var processing = function(response) {
-  var tests = response.Results;
-  for(i=0; i < tests.length; i++) {
-    recipeArray.push(new Recipe(tests[i]))
+  var processing = function(response) {
+    var tests = response.Results;
+    for(i=0; i < tests.length; i++) {
+      recipeArray.push(new Recipe(tests[i]))
+    }
+  window.localStorage.setItem('array', JSON.stringify(recipeArray));
+  move();
   }
-window.localStorage.setItem('array', JSON.stringify(recipeArray));
-move();
-}
 
-var Recipe = function(info){
+  var Recipe = function(info){
     this.name = info.Title,
     this.image = info.ImageURL,
     this.web = info.WebURL
-   }
+  }
 
-
-function getRecipeJson(searchTerm) {
-  var apiKey = "dvxTzcHziZpKgfz9rxpuA9i3Qh10wNK3";
-  var titleKeyword = '"' + searchTerm +'"';
-  var url = "http://api.bigoven.com/recipes?pg=1&rpp=5&title_kw="
+  window.getRecipeJson = function (searchTerm) {
+    var apiKey = "dvxTzcHziZpKgfz9rxpuA9i3Qh10wNK3";
+    var titleKeyword = '"' + searchTerm +'"';
+    var url = "http://api.bigoven.com/recipes?pg=1&rpp=5&title_kw="
                   + titleKeyword
                   + "&api_key="+apiKey;
 
-  $.ajax({
-    type: "GET",
-    dataType: 'json',
-    cache: false,
-    url: url,
-    success: function (data) {
-      processing(data);
+    $.ajax({
+      type: "GET",
+      dataType: 'json',
+      cache: false,
+      url: url,
+      success: function (data) {
+        processing(data);
       }
     })
   };
 
 
-//name button event listner with validation
-$('#namebutton').on('click', function() {
-  event.preventDefault();
-  $userName = $('#username').val();
-  if ($userName === '') {
-    $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>')
-    $("#nameform")[0].reset()
-  } else {
-  $userName = $('#username').val();
-  // Capitalize first letter of username
-  function capitalize(str){
- return str.substring(0, 1).toUpperCase() + str.substring(1);
-  };
-  window.localStorage.setItem('name', capitalize($userName));
+  //name button event listner with validation
+  $('#namebutton').on('click', function() {
+    event.preventDefault();
+    $userName = $('#username').val();
+    if ($userName === '') {
+      $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>')
+      $("#nameform")[0].reset()
+    } else {
+        $userName = $('#username').val();
+        // Capitalize first letter of username
+        function capitalize(str){
+           return str.substring(0, 1).toUpperCase() + str.substring(1);
+        };
+        window.localStorage.setItem('name', capitalize($userName));
 
-  $('footer').html('<p>Welcome ' + $userName + ' !</p>');
-  }
-});
-//get started event listener
-$('#getstarted').on('click', function() {
-  if (!$userName) {
-    $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>');
-  } else {
-    window.location.href = "feelings.html";
-  }
-});
+        $('footer').html('<p>Welcome ' + $userName + ' !</p>');
+      }
+  });
+  //get started event listener
+  $('#getstarted').on('click', function() {
+    if (!$userName) {
+      $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>');
+    } else {
+        window.location.href = "feelings.html";
+      }
+  });
 
-$('#pagetwosection').prepend(window.localStorage.getItem('name') + ', ');
+  $('#pagetwosection').prepend(window.localStorage.getItem('name') + ', ');
 
-$('h1').on('click', function() {
+  $('h1').on('click', function() {
     window.location.href = 'index.html';
 
-})
+  })
 
+});
