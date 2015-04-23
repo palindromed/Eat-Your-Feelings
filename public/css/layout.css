@@ -261,10 +261,6 @@ figcaption {
   font-style: bold;
 }
 
-/*end recipe location page
-
-/*feelings page
-
 article {
     font-size: 1.5rem;
     line-height: 1.6;
@@ -287,7 +283,7 @@ button {
   text-decoration:none;
   border-radius: 10em;
 }
-/*end feelings page
+
 .recipes {
   margin-top:-3em;
   display: flex;
@@ -322,7 +318,8 @@ button {
 #pretzel {
   margin-left: 44px;
 }
-/*PACMAN IS BELOW HERE*?
+
+/*PACMAN IS BELOW HERE*/
 /*credit to http://veli.ee/lab/csspacman/ for the pacman animation framework*/
      .wrapper{
           max-width:800px;
