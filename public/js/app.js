@@ -127,7 +127,6 @@ function getRecipeJson(searchTerm) {
     })
   };
 
-
 //name button event listner with validation
 $('#namebutton').on('click', function() {
   event.preventDefault();
@@ -136,15 +135,16 @@ $('#namebutton').on('click', function() {
     $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>')
     $("#nameform")[0].reset()
   } else {
-  $userName = $('#username').val();
+    $userName = $('#username').val();
+    $('#getstarted').removeClass('hiddenbutton');
   // Capitalize first letter of username
-  function capitalize(str){
- return str.substring(0, 1).toUpperCase() + str.substring(1);
+    function capitalize(str){
+    return str.substring(0, 1).toUpperCase() + str.substring(1);
   };
   window.localStorage.setItem('name', capitalize($userName));
-
   $('footer').html('<p>Welcome ' + $userName + ' !</p>');
   }
+
 });
 //get started event listener
 $('#getstarted').on('click', function() {
@@ -159,6 +159,5 @@ $('#pagetwosection').prepend(window.localStorage.getItem('name') + ', ');
 
 $('h1').on('click', function() {
     window.location.href = 'index.html';
-
 })
 
