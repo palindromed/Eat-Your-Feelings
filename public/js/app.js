@@ -139,7 +139,7 @@ $(function() {
   if (welcomeBack) {
      $username = window.localStorage.getItem('name');
      $('#getstarted').removeClass('hiddenbutton');
-     $('.gallifrey').html('<p>Welcome back ' + $username+ '!</p>');
+     $('.gallifrey').html('<p>Welcome back, ' + $username+ '!</p>');
 
   }else {
 
