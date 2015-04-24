@@ -138,27 +138,52 @@ $(function() {
      $username = window.localStorage.getItem('name');
      $('#getstarted').removeClass('hiddenbutton');
      $('.gallifrey').html('<p>Welcome back, ' + $username+ '!</p>');
-
-  } else {
+  }
+  else {
     //name button event listner with validation
     $('#namebutton').on('click', function() {
+       event.preventDefault();
+  $userName = $('#username').val();
+  if ($userName === '') {
+    $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>')
+    $("#nameform")[0].reset()
+  } else {
+    $userName = $('#username').val();
+    $('#getstarted').removeClass('hiddenbutton');
+  // Capitalize first letter of username
+    function capitalize(str){
+    return str.substring(0, 1).toUpperCase() + str.substring(1);
+  };
+  window.localStorage.setItem('name', capitalize($userName));
+  $('footer').html('<p>Welcome ' + window.localStorage.getItem('name') + ' !</p>');
+  }
+});
+
+}
+
+
+   //name button event listner with validation
+  $('#namebutton').on('click', function() {
       event.preventDefault();
-      $userName = $('#username').val();
+      if (welcomeBack) {
+        $userName = $('#username').val();
       if ($userName === '') {
         $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>')
         $("#nameform")[0].reset()
       } else {
         $userName = $('#username').val();
-        $('#getstarted').removeClass('hiddenbutton');
-      // Capitalize first letter of username
+      // Capitalize first letter of new username
         function capitalize(str){
-        return str.substring(0, 1).toUpperCase() + str.substring(1);
-      };
-      window.localStorage.setItem('name', capitalize($userName));
-      $('footer').html('<p>Welcome ' + window.localStorage.getItem('name') + ' !</p>');
+          return str.substring(0, 1).toUpperCase() + str.substring(1);
+        };
+        window.localStorage.setItem('name', capitalize($userName));
+        $('footer').html('<p>Welcome ' + window.localStorage.getItem('name') + ' !</p>');
+        }
       }
-    });
-  }
+  });
+
+
+
 
   //get started event listener
   $('#getstarted').on('click', function() {
