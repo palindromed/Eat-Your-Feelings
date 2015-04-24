@@ -1,10 +1,4 @@
-/*Index page*/
-html {
 
-}
-body {
-
-}
 #backdrop {
   background-color: #b9121b;
 }
@@ -204,7 +198,6 @@ p {
   background: linear-gradient(to bottom,  #7db9e8 0%,#207cca 1%,#2989d8 53%,#32e8fc 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#32e8fc',GradientType=0 );
 }
-
 footer {
   position: absolute;
   bottom: 0;
@@ -260,20 +253,14 @@ figcaption {
   text-shadow: .2em .2em .2em #000000;
   font-style: bold;
 }
-
 article {
     font-size: 1.5rem;
     line-height: 1.6;
     letter-spacing: 0;
 }
-
-section {
-}
-
 p {
   color: #f6e497;
 }
-
 button {
   text-align: center;
   padding:2px 4px 2px 4px;
@@ -283,7 +270,6 @@ button {
   text-decoration:none;
   border-radius: 10em;
 }
-
 .recipes {
   margin-top:-3em;
   display: flex;
@@ -318,7 +304,6 @@ button {
 #pretzel {
   margin-left: 44px;
 }
-
 /*PACMAN IS BELOW HERE*/
 /*credit to http://veli.ee/lab/csspacman/ for the pacman animation framework*/
      .wrapper{

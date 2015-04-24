@@ -8,7 +8,6 @@ $(function() {
   var getRecipeJson = window.getRecipeJson;
   var $userName;
 
-
   var move = function(){
     window.location.href = "locationrecipe.html";
   }
@@ -133,14 +132,12 @@ $(function() {
     })
   };
 
-
   var welcomeBack = window.localStorage.getItem('name');
 
   if (welcomeBack) {
      $username = window.localStorage.getItem('name');
      $('#getstarted').removeClass('hiddenbutton');
      $('.gallifrey').html('<p>Welcome back, ' + $username+ '!</p>');
-
   }
   else {
     //name button event listner with validation
@@ -175,7 +172,6 @@ $(function() {
         $("#nameform")[0].reset()
       } else {
         $userName = $('#username').val();
-        //$('#getstarted').removeClass('hiddenbutton');
       // Capitalize first letter of new username
         function capitalize(str){
           return str.substring(0, 1).toUpperCase() + str.substring(1);
@@ -188,16 +184,15 @@ $(function() {
 
 
 
-//get started event listener
-$('#getstarted').on('click', function() {
-  if (!welcomeBack && !$userName) {
-    $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>');
-  } else {
-    window.location.href = "feelings.html";
-  }
-});
 
-
+  //get started event listener
+  $('#getstarted').on('click', function() {
+    if (!welcomeBack && !$userName) {
+      $('footer').html('<p>We can\'t eat your feelings if we don\'t know who you are!</p>');
+    } else {
+      window.location.href = "feelings.html";
+    }
+  });
 
   $('#pagetwosection').prepend(window.localStorage.getItem('name') + ', ');
 
